@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        #header h1 {
+            margin: 0;
+            padding: 0 20px;
+        }
+        ul {
+            padding: 20px 0;
+            list-style-type: none;
+        }
+        ul li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>Lista de Productos</h1>
+        </div>
+    </div>
+    <div class="container">
+        <ul>
+            {% for producto in productos %}
+                <li>{{ producto.nombre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
